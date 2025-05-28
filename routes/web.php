@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\StatsController;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TaskController;
@@ -33,7 +33,7 @@ Route::get('/user/{name}', [UserController::class, 'show']);
 // Put one code line here below
 // Route::view('/about', 'about')->name('about');
 Route::get('/about', function() {
-    return view('about');
+    return view('pages.about');
 })->name('about');
 
 // Task 4: redirect the GET URL "log-in" to a URL "login"
