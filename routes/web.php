@@ -42,7 +42,7 @@ Route::redirect('/log-in', '/login');
 // Put one Route Group code line here below
     Route::group(['middleware' => 'auth'], function () {
         Route::prefix('app')->group(function () {
-            Route::get('/dashboard', DashboardController::class);
+            Route::get('/dashboard', DashboardController::class)->name('dashboard');
 
             Route::resource('tasks', TaskController::class);
         });
